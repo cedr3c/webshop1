@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        font-family: FranklinGothic-Heavy, 'Franklin Gothic Heavy';
+        font-size: 6px;
+        font-weight: 800;
+        letter-spacing: .24em;
+      }
+    </style>
+  </defs>
+  <g>
+    <polygon class="cls-1" points="19.67 9.51 17.45 3.44 19.43 2.65 22.07 9.51 22.38 10.06 28.16 10.06 28.16 12.49 27.13 12.64 24.47 24.33 8.01 24.49 4.92 12.72 3.84 12.59 3.87 10.01 9.8 10.17 12.76 2.65 14.68 3.39 12.33 10.11 19.64 10.19 19.67 9.51"/>
+    <polyline class="cls-1" points="9.8 10.17 12.83 10.19 23.18 10.19 28.16 10.06 28.16 12.49 27.13 12.64 21.86 12.66 21.54 12.66 11.62 12.7 11.12 12.7 10.59 12.7 4.92 12.72 5.98 16.75 11.2 16.75 26.2 16.75 25.15 20.64 7.11 20.64 8.01 24.49 11.73 24.45 10.59 13.09 16.27 13.2 16.06 24.41 20.67 24.07 21.59 13.25"/>
+  </g>
+  <text class="cls-2" transform="translate(8.16 30.1)"><tspan x="0" y="0">WEB</tspan></text>
+</svg>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webshop</title>
+    <link rel="icon" type="image/x-icon" href="Icon.svg">
+</head>
+<body>
+    <style>
+        html {
+            background-color: beige;
+        }
+        .button {
+            display: block;
+            margin-left: auto; 
+            margin-right: auto;
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .input {
+            height: 50px;
+            width: 50px;
+            margin-right: 10px;
+        }
+
+    </style>
+    <h1 style="font-family: sans-serif; font-size: 60pt; text-align: center;" id="Titel"></h1>
+    <img src="picture.jpg" style="height: 500px; width: 500px; display: block; margin-left: auto; margin-right: auto; ">
+    <p style="font-family: sans-serif; text-align: center; font-size: 20pt; margin-top: 50px; margin-left: 10%; margin-right: 10%;" id="beschreibung">Beschreibung...</p>
+    <button  class="button"><input onclick="not()" id="piece" class="input" type="number" max="99"><label onclick="validate()" style="font-size: 20pt;">bestellen</label></button>
+    <script>
+
+        var product = "a";
+        var stuff = "0";
+
+        fetch('name.txt')
+        .then(response => response.text())
+        .then(data => {
+            product = data;
+        })
+        .catch(error => console.error('Es gab einen Fehler:', error));
+
+
+
+        fetch('name.txt')
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById('Titel').innerHTML = data;
+          });
+
+          fetch('beschreibung.txt')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('beschreibung').innerHTML = data;
+            });
+
+        function validate() {
+            stuff = document.getElementById('piece').value;
+            if (stuff > 0) {
+                localStorage.setItem("orderCount", stuff)
+                localStorage.setItem("currentProduct", product)
+                window.location.href = "../../success.html"
+            }
+            else {
+                alert("Bestellung fehlgeschlagen! Sie müssen mindestens ein Produkt bestellen.")
+            }
+        }
+
+        
+
+       </script>
+</body>
+</html>

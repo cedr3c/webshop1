@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Success</title>
+    <link rel="icon" type="image/x-icon" href="Icon.svg">
+</head>
+<body>
+    <h1 id="text">Fehler...</h1>
+    <style>
+        html {
+            background-color: beige;
+        }
+
+        h1{
+            font-family: sans-serif;
+            font-size: 80pt;
+            text-align: center;
+            margin-top: 23%;
+        }
+    </style>
+    <script>
+        let orderCount = localStorage.getItem("orderCount")
+        let product = localStorage.getItem("currentProduct")
+        document.getElementById('text').innerHTML = ` ${orderCount}x Stück von ${product} bestellt!`
+        setTimeout(function() {
+            window.location.href = ("index.html")
+        }, 5000);
+    </script>
+</body>
+</html>
